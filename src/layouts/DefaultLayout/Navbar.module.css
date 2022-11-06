@@ -1,0 +1,8 @@
+.navbar {
+  border-bottom: 3px solid #ededed;
+  min-height: 80px;
+}
+
+.navLink {
+  color: var(--bs-body-color);
+}
