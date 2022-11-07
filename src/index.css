@@ -1,4 +1,130 @@
 :root {
   --bs-font-sans-serif: "Roboto", sans-serif;
   --bs-body-color: #4a4a4a;
+  --bs-link-color: #ea7f28;
+  --bs-link-hover-color: #d37324;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Margin and padding utility classes */
+.mb-8px,
+.my-8px {
+  margin-bottom: 8px;
+}
+.mt-8px,
+.my-8px {
+  margin-top: 8px;
+}
+.ms-8px,
+.mx-8px {
+  margin-left: 8px;
+}
+.me-8px,
+.mx-8px {
+  margin-right: 8px;
+}
+
+.mb-12px,
+.my-12px {
+  margin-bottom: 12px;
+}
+.mt-12px,
+.my-12px {
+  margin-top: 12px;
+}
+.ms-12px,
+.mx-12px {
+  margin-left: 12px;
+}
+.me-12px,
+.mx-12px {
+  margin-right: 12px;
+}
+
+.mb-24px,
+.my-24px {
+  margin-bottom: 24px;
+}
+.mt-24px,
+.my-24px {
+  margin-top: 24px;
+}
+.ms-24px,
+.mx-24px {
+  margin-left: 24px;
+}
+.me-24px,
+.mx-24px {
+  margin-right: 24px;
+}
+
+.pb-8px,
+.py-8px {
+  padding-bottom: 8px;
+}
+.pt-8px,
+.py-8px {
+  padding-top: 8px;
+}
+.ps-8px,
+.px-8px {
+  padding-left: 8px;
+}
+.pe-8px,
+.px-8px {
+  padding-right: 8px;
+}
+
+.pb-12px,
+.py-12px {
+  padding-bottom: 12px;
+}
+.pt-12px,
+.py-12px {
+  padding-top: 12px;
+}
+.ps-12px,
+.px-12px {
+  padding-left: 12px;
+}
+.pe-12px,
+.px-12px {
+  padding-right: 12px;
+}
+
+.pb-24px,
+.py-24px {
+  padding-bottom: 24px;
+}
+.pt-24px,
+.py-24px {
+  padding-top: 24px;
+}
+.ps-24px,
+.px-24px {
+  padding-left: 24px;
+}
+.pe-24px,
+.px-24px {
+  padding-right: 24px;
+}
+
+/* Font size utility classes */
+.fz-12px {
+  font-size: 12px;
+}
+.fz-14px {
+  font-size: 14px;
+}
+.fz-18px {
+  font-size: 18px;
+}
+.fz-32px {
+  font-size: 32px;
 }

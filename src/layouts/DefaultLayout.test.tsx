@@ -1,7 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 
-import DefaultLayout from "./index";
+import DefaultLayout from "./DefaultLayout";
 
 describe("DefaultLayout tests", () => {
   test("renders supplied children", () => {

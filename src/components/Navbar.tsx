@@ -4,7 +4,7 @@ import BSNavbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
-import logo from "../../assets/logo.png";
+import logo from "../assets/logo.png";
 
 const Navbar: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
           <img
             alt="Auto1.com"
             src={logo}
-            height="35"
+            height="40"
             className="d-inline-block align-center"
           />
         </BSNavbar.Brand>

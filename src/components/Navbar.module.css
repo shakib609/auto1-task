@@ -3,6 +3,9 @@
   min-height: 80px;
 }
 
-.navLink {
+.navLink:hover {
+  text-decoration: none;
+}
+.navLink span {
   color: var(--bs-body-color);
 }
