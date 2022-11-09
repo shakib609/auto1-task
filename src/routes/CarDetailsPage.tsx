@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
 import apiManager from "../services/apiManager";
 import ErrorPage from "./ErrorPage";
+import favoritesManager from "../services/favoritesManager";
 
 const CarDetailsPage: React.FC = () => {
   const { stockNumber } = useParams();
@@ -71,7 +72,14 @@ const CarDetailsPage: React.FC = () => {
                 collection of favorite items.
               </p>
               <div className="d-flex justify-content-end">
-                <Button bsPrefix="auto-btn">Save</Button>
+                <Button
+                  bsPrefix="auto-btn"
+                  onClick={() => {
+                    if (car) favoritesManager.addToFavorites(car);
+                  }}
+                >
+                  Save
+                </Button>
               </div>
             </Card.Body>
           </Card>
