@@ -3,6 +3,7 @@
   --bs-body-color: #4a4a4a;
   --bs-link-color: #ea7f28;
   --bs-link-hover-color: #d37324;
+  --bs-border-color: #ededed;
 }
 
 a {
@@ -135,3 +136,9 @@ a:hover {
 }
 
 /* Color helpers */
+.bg-orange {
+  background-color: #ea7f28 !important;
+}
+.bg-gray {
+  background-color: #ededed !important;
+}

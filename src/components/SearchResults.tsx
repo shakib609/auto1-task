@@ -28,9 +28,11 @@ const SearchResults: React.FC = () => {
       )}
 
       <div className="car-details-card-list">
-        {cars.map((car) => (
-          <CarDetailsCard key={car.stockNumber} car={car} />
-        ))}
+        {loading
+          ? [...Array(10)].map((v, idx) => <CarDetailsCard loading key={idx} />)
+          : cars.map((car) => (
+              <CarDetailsCard key={car.stockNumber} car={car} />
+            ))}
       </div>
 
       <Pagination

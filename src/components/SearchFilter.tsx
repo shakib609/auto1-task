@@ -18,7 +18,7 @@ const SearchFilter: React.FC = () => {
   };
 
   return (
-    <Card className="rounded-0">
+    <Card className="rounded-0 border border-2">
       <Card.Body className="px-24px py-24px">
         <form onSubmit={handleSubmit}>
           <label htmlFor="color" className="mb-8px fz-14px">
@@ -56,7 +56,9 @@ const SearchFilter: React.FC = () => {
           </Form.Select>
 
           <div className="d-flex justify-content-end">
-            <Button type="submit">Filter</Button>
+            <Button type="submit" className="bg-orange">
+              Filter
+            </Button>
           </div>
         </form>
       </Card.Body>
