@@ -49,7 +49,8 @@ const CarDetailsCard: React.FC<TCarDetailsCardProps> = ({ car, loading }) => {
                 <p className="mb-12px">
                   Stock # {car.stockNumber} - {car.mileage.number}{" "}
                   <span className="text-uppercase">{car.mileage.unit}</span> -{" "}
-                  {car.fuelType} - {car.color}
+                  {car.fuelType} -{" "}
+                  <span className="text-capitalize">{car.color}</span>
                 </p>
                 <p className="mb-0">
                   <Link to={`/details/${car.stockNumber}`}>View Details</Link>

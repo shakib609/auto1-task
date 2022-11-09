@@ -64,14 +64,14 @@ const CarDetailsPage: React.FC = () => {
         </Col>
 
         <Col md={5} className="pe-0">
-          <Card className="rounded-0 px-12px py-12px">
+          <Card className="rounded-0 px-12px py-12px border border-2">
             <Card.Body>
               <p className="mb-8px fz-14px">
                 If you like this car, click the button and save it in your
-                collection of favourite items.
+                collection of favorite items.
               </p>
               <div className="d-flex justify-content-end">
-                <Button>Save</Button>
+                <Button bsPrefix="auto-btn">Save</Button>
               </div>
             </Card.Body>
           </Card>

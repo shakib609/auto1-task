@@ -1,3 +1,5 @@
+import styles from "./Pagination.module.css";
+
 type TPaginationProps = {
   totalPageCount: number;
   currentPage: number;
@@ -10,7 +12,9 @@ const Pagination: React.FC<TPaginationProps> = ({
   handlePageChange,
 }) => {
   return (
-    <div className="d-flex justify-content-center py-8px px-24px my-24px">
+    <div
+      className={`d-flex justify-content-center py-8px px-24px my-24px ${styles.pagination}`}
+    >
       <span
         role="button"
         className="me-24px"

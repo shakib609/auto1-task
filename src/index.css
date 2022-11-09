@@ -142,3 +142,25 @@ a:hover {
 .bg-gray {
   background-color: #ededed !important;
 }
+
+.text-orange {
+  color: #ea7f28 !important;
+}
+
+/* Auto1 Button CSS */
+.auto-btn {
+  width: 128px;
+  height: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+.auto-btn-primary {
+  color: #fff;
+  font-size: 14px;
+  background-color: #ea7f28;
+}
+.auto-btn-primary:hover {
+  background-color: #d37324;
+}

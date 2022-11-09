@@ -1,0 +1,8 @@
+.pagination span[role="button"] {
+  color: var(--bs-link-color);
+}
+
+.pagination span[role="button"]:hover {
+  color: var(--bs-link-hover-color);
+  text-decoration: underline;
+}

@@ -56,7 +56,7 @@ const SearchFilter: React.FC = () => {
           </Form.Select>
 
           <div className="d-flex justify-content-end">
-            <Button type="submit" className="bg-orange">
+            <Button bsPrefix="auto-btn" type="submit">
               Filter
             </Button>
           </div>
