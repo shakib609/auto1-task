@@ -36,9 +36,7 @@ const FavoritesProvider: React.FC<TFavoritesProviderProps> = ({ children }) => {
   };
 
   const saveCarToFavorites = (car: TCar) => {
-    if (!isCarSaved(car)) {
-      setSavedCars([...savedCars, car]);
-    }
+    setSavedCars([...savedCars, car]);
   };
 
   const deleteCarFromFavorites = (car: TCar) => {

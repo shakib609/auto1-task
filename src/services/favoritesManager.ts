@@ -11,7 +11,7 @@ class FavoritesManager {
         return [];
       }
     } catch (e) {
-      console.error("Invalid localStorage value");
+      console.error("Invalid localStorage value", e);
       console.error(e);
       this.setFavorites([]);
       return [];

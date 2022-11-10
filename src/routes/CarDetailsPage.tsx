@@ -49,6 +49,7 @@ const CarDetailsPage: React.FC = () => {
           backgroundImage: `url(${car?.pictureUrl})`,
         }}
       ></div>
+
       <Row className="mx-auto pt-24px" style={{ maxWidth: 800 }}>
         <Col className="ps-0">
           <h2 className="fw-bold fz-32px mb-12px">

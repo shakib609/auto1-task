@@ -6,7 +6,7 @@ const router = createBrowserRouter(routes);
 
 const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className="app" data-testid="app-container">
       <FavoritesProvider>
         <RouterProvider router={router} />
       </FavoritesProvider>

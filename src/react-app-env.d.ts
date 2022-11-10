@@ -15,11 +15,9 @@ type TCar = {
 
 type TManufacturer = {
   name: string;
-  models: [
-    {
-      name: string;
-    }
-  ];
+  models: {
+    name: string;
+  }[];
 };
 
 type TAllCarsAPIResponse = {

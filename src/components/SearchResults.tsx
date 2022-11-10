@@ -12,7 +12,8 @@ const SearchResults: React.FC = () => {
   } = useContext(SearchContext);
 
   const handlePageChange = (page: number) => {
-    if (searchParams.page !== page) {
+    const currentPage = searchParams.page;
+    if (currentPage !== page && page > 0 && page <= totalPageCount) {
       setSearchParams({ ...searchParams, page });
     }
   };
@@ -29,9 +30,19 @@ const SearchResults: React.FC = () => {
 
       <div className="car-details-card-list">
         {loading
-          ? [...Array(10)].map((v, idx) => <CarDetailsCard loading key={idx} />)
+          ? [...Array(10)].map((v, idx) => (
+              <CarDetailsCard
+                data-testid="card-details-card-loading"
+                loading
+                key={idx}
+              />
+            ))
           : cars.map((car) => (
-              <CarDetailsCard key={car.stockNumber} car={car} />
+              <CarDetailsCard
+                data-testid="car-details-card"
+                key={car.stockNumber}
+                car={car}
+              />
             ))}
       </div>
 

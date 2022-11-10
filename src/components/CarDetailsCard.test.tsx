@@ -40,4 +40,10 @@ describe("CarDetailsCard tests", () => {
       `/details/${mockCar.stockNumber}`
     );
   });
+
+  test("renders loading ui when passed the loading prop", () => {
+    render(<CarDetailsCard loading />, { wrapper: MemoryRouter });
+    const loadingElement = screen.getByRole("presentation");
+    expect(loadingElement).toBeInTheDocument();
+  });
 });

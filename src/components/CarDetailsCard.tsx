@@ -20,7 +20,8 @@ const CarDetailsCard: React.FC<TCarDetailsCardProps> = ({ car, loading }) => {
             <div
               className="bg-gray me-24px"
               style={{ width: 150, height: 120 }}
-            ></div>
+              role="presentation"
+            />
           )}
 
           {car && (

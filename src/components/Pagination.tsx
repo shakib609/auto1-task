@@ -25,7 +25,7 @@ const Pagination: React.FC<TPaginationProps> = ({
       <span
         role="button"
         aria-disabled={currentPage === 1}
-        onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+        onClick={() => handlePageChange(currentPage - 1)}
       >
         Previous
       </span>
@@ -36,9 +36,7 @@ const Pagination: React.FC<TPaginationProps> = ({
         role="button"
         className="me-24px"
         aria-disabled={currentPage === totalPageCount}
-        onClick={() =>
-          currentPage < totalPageCount && handlePageChange(currentPage + 1)
-        }
+        onClick={() => handlePageChange(currentPage + 1)}
       >
         Next
       </span>
