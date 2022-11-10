@@ -29,7 +29,7 @@ describe("CarDetailsPage tests", () => {
     console.error = jest.fn();
     apiManagerCarDetailsSpy.mockRejectedValue(new Error("Mock Error"));
     render(<CarDetailsPage />, { wrapper: MemoryRouter });
-    await screen.findByText(/404 \- not found/i);
+    await screen.findByText(/404 - not found/i);
     expect(apiManagerCarDetailsSpy).toHaveBeenCalledTimes(1);
     expect(console.error).toHaveBeenCalledTimes(1);
   });
