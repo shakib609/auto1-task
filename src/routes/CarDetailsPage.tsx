@@ -1,18 +1,22 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
+
+import styles from "./CarDetailsPage.module.css";
 import apiManager from "../services/apiManager";
 import ErrorPage from "./ErrorPage";
-import favoritesManager from "../services/favoritesManager";
+import { FavoritesContext } from "../contexts/FavoritesContext";
 
 const CarDetailsPage: React.FC = () => {
   const { stockNumber } = useParams();
   const parsedStockNumber = Number(stockNumber);
   const [car, setCar] = useState<TCar | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const { isCarSaved, saveCarToFavorites, deleteCarFromFavorites } =
+    useContext(FavoritesContext);
 
   useEffect(() => {
     apiManager
@@ -25,6 +29,13 @@ const CarDetailsPage: React.FC = () => {
       });
   }, [parsedStockNumber]);
 
+  function handleButtonClick() {
+    if (car) {
+      if (!isCarSaved(car)) saveCarToFavorites(car);
+      else deleteCarFromFavorites(car);
+    }
+  }
+
   if (error) {
     console.error(error);
     return <ErrorPage />;
@@ -33,14 +44,9 @@ const CarDetailsPage: React.FC = () => {
   return (
     <div>
       <div
-        className="mb-12px"
+        className={styles.imgContainer}
         style={{
           backgroundImage: `url(${car?.pictureUrl})`,
-          minHeight: 240,
-          backgroundColor: "#ededed",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
         }}
       ></div>
       <Row className="mx-auto pt-24px" style={{ maxWidth: 800 }}>
@@ -64,26 +70,23 @@ const CarDetailsPage: React.FC = () => {
           </p>
         </Col>
 
-        <Col md={5} className="pe-0">
-          <Card className="rounded-0 px-12px py-12px border border-2">
-            <Card.Body>
-              <p className="mb-8px fz-14px">
-                If you like this car, click the button and save it in your
-                collection of favorite items.
-              </p>
-              <div className="d-flex justify-content-end">
-                <Button
-                  bsPrefix="auto-btn"
-                  onClick={() => {
-                    if (car) favoritesManager.addToFavorites(car);
-                  }}
-                >
-                  Save
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
+        {car && (
+          <Col md={5} className="pe-0">
+            <Card className="rounded-0 px-12px py-12px border border-2">
+              <Card.Body>
+                <p className="mb-8px fz-14px">
+                  If you like this car, click the button and save it in your
+                  collection of favorite items.
+                </p>
+                <div className="d-flex justify-content-end">
+                  <Button bsPrefix="auto-btn" onClick={handleButtonClick}>
+                    {isCarSaved(car) ? "Delete" : "Save"}
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        )}
       </Row>
     </div>
   );

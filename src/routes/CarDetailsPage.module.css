@@ -1,0 +1,8 @@
+.imgContainer {
+  min-height: 240px;
+  background-color: #ededed;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 12px;
+}

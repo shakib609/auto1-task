@@ -1,21 +1,22 @@
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import CarDetailsCard from "../components/CarDetailsCard";
-import favoritesManager from "../services/favoritesManager";
+import { FavoritesContext } from "../contexts/FavoritesContext";
 
 const FavoritesPage: React.FC = () => {
-  const favorites = favoritesManager.getFavorites();
+  const { savedCars } = useContext(FavoritesContext);
 
   return (
     <Container className="pt-24px">
       <h3 className="fz-18px fw-bold mb-24px">Saved Cars</h3>
 
-      {favorites.length === 0 && (
+      {savedCars.length === 0 && (
         <p className="fw-bold text-center fz-32px" style={{ marginTop: 150 }}>
           No cars saved yet!
         </p>
       )}
 
-      {favorites.map((car) => (
+      {savedCars.map((car) => (
         <CarDetailsCard key={car.stockNumber} car={car} />
       ))}
     </Container>
