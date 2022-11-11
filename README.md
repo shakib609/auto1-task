@@ -1,5 +1,7 @@
 # Auto1-Task
 
+![npm-test-workflow](https://github.com/shakib609/auto1-task/actions/workflows/jest-react-testing.yml/badge.svg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
