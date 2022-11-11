@@ -1,0 +1,32 @@
+:root {
+  --bs-font-sans-serif: "Roboto", sans-serif;
+  --bs-body-color: #4a4a4a;
+  --bs-link-color: #ea7f28;
+  --bs-link-hover-color: #d37324;
+  --bs-border-color: #ededed;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Auto1 Button CSS */
+.auto-btn {
+  width: 128px;
+  height: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+.auto-btn-primary {
+  color: #fff;
+  font-size: 14px;
+  background-color: var(--bs-link-color);
+}
+.auto-btn-primary:hover {
+  background-color: var(--bs-link-hover-color);
+}
